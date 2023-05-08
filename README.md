@@ -2,8 +2,8 @@ PYTHON
 
 Learning to code using python Language
 
-Pythin is an interpreted, general purpose (versatile)
-high-level programming language with easy syntax and dynamic semantics.
+Python is an Interpreted, General purpose (versatile)
+High-level programming language with easy syntax and dynamic semantics.
 
 The language was created by Guido Van Rossun in the 1980's.
 
