@@ -2,8 +2,9 @@
 
 def multiple_returns(sentence):
     if sentence == '\0':
-        return None
+        char = None
+    else:
+        char = sentence[0]
     length = len(sentence)
-    char = sentence[0]
     my_tuple = (length, char)
     return my_tuple
