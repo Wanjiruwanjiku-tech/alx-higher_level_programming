@@ -8,7 +8,6 @@ def read_file(filename=""):
 
 	A with statement has to be used.
     """
-    with open('filename', encoding="UTF8") as file:
-        for line in file:
+    with open('filename', encoding="UTF8") as my_file:
+        for line in my_file:
             print(line, end="")
-    file.close()
