@@ -17,7 +17,7 @@ class Rectangle(BaseGeometry):
 	    - both values must be validated  by
 	    integer_validator
         """
-        if self.integer_validator("Width", width):
+        if self.integer_validator("width", width):
             self.__width = width
-        if self.integer_validator("Height", height):
+        if self.integer_validator("height", height):
             self.__height = height
