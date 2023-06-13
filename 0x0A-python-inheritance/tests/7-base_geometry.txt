@@ -1,0 +1,117 @@
+This Test file runs tests for the module 7-base_geometry.py
+---------------------------------------------------------
+
+The Module runs a class called BaseGeometry
+First import the class from the module
+--------------------------------------
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Printing the area
+-----------------
+
+This raises an Exception with a message:
+	Exception('area() is not implemented')
+
+>>> my_area = BaseGeometry()
+>>> my_area.area()
+Traceback (most recent call last):
+          ...
+Exception: area() is not implemented
+
+
+Integer Validation
+------------------
+
+1. Passing a non integer as the value
+-------------------------------------
+
+	string
+	------
+
+>>> int_validator = BaseGeometry()
+>>> int_validator.integer_validator("name", "Hello")
+Traceback (most recent call last):
+          ...
+TypeError: name must be an integer
+
+	Tuple
+	-----
+
+>>> int_validator = BaseGeometry()
+>>> int_validator.integer_validator("numbers", (6,))
+Traceback (most recent call last):
+          ...
+TypeError: numbers must be an integer
+
+	List
+	----
+
+>>> int_validator = BaseGeometry()
+>>> int_validator.integer_validator("size", [5])
+Traceback (most recent call last):
+          ...
+TypeError: size must be an integer
+
+	Dictionary
+	----------
+
+>>> int_validator = BaseGeometry()
+>>> int_validator.integer_validator("my_values", {10, 5})
+Traceback (most recent call last):
+          ...
+TypeError: my_values must be an integer
+
+	None
+	----
+
+>>> int_validator = BaseGeometry()
+>>> int_validator.integer_validator("name", None)
+Traceback (most recent call last):
+          ...
+TypeError: name must be an integer
+
+	Boolean
+	-------
+
+>>> int_validator = BaseGeometry()
+>>> int_validator.integer_validator("Boo", True)
+Traceback (most recent call last):
+          ...
+TypeError: Boo must be an integer
+
+Expected
+-------
+
+>>> int_validator = BaseGeometry()
+>>> int_validator.integer_validator("Boo", 95)
+>>> 
+
+2. Passing a value <= 0
+-----------------------
+
+	value == 0
+	---------
+
+>>> int_validator = BaseGeometry()
+>>> int_validator.integer_validator("Width", 0)
+Traceback (most recent call last):
+          ...
+ValueError: Width must be greater than 0
+
+
+	value < 0
+	---------
+
+>>> int_validator = BaseGeometry()
+>>> int_validator.integer_validator("Width", -5)
+Traceback (most recent call last):
+          ...
+ValueError: Width must be greater than 0
+
+Expected
+--------
+
+>>> int_validator = BaseGeometry()
+>>> int_validator.integer_validator("Width", 10)
+>>> 
