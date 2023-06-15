@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ This Module runs a Derived Class """
 
-BaseGeometry = __import__ ('7-base_geometry').BaseGeometry
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 #Import the Superclass
 
 class Rectangle(BaseGeometry): #The Derived Class
