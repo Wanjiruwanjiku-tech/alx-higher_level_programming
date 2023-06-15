@@ -4,6 +4,5 @@
 	A LIST OF ATTRIBUTES AND METHODS
 """
 def lookup(obj):
-    my_list = []
-    my_list = dir(obj)
-    return my_list
+""" Returns a list of available attributes """
+    return dir(obj)
