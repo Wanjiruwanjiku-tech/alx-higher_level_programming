@@ -3,5 +3,5 @@
 	This module runs a script that defines a function
 """
 def lookup(obj):
-""" Returns a list of available attributes """
+    """ Returns a list of available attributes """
     return dir(obj)
