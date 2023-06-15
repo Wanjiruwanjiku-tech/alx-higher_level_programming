@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-
-""" THIS MODULE RUNS A FUNCTION THAT RETURNS
-	A LIST OF ATTRIBUTES AND METHODS
+""" 
+	This module runs a script that defines a function
 """
 def lookup(obj):
 """ Returns a list of available attributes """
