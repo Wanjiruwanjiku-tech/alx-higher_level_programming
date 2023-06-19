@@ -5,7 +5,7 @@ The Base superclass.
 
 #import the superclass
 
-from base import Base
+from models.base import Base
 
 class Rectangle(Base):
 

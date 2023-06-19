@@ -3,7 +3,7 @@
 Rectangle
 """
 
-from rectangle import Rectangle
+from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """ The Class Defines a Square """
