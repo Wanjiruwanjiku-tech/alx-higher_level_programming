@@ -51,3 +51,41 @@ class Base:
                 f.write("[]")
             else:
                 f.write(json_str)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ Returns the list of the JSON string 
+            representation json_strin
+        """
+        if json_string is None or bool(json_string) is False:
+            json_string = "[]"
+            return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ returns an instance with all attributes 
+            already set:
+        """
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """ returns a list of instances """
+        filename = "{}.json".format(cls.__name)
+        my_list = []
+
+        try:
+            with open(filename, 'r') as f:
+                json_string = f.read()
+                dictionary_list = cls.from_json_string(json_string)
+                for item in dictionary_list:
+                    instance = cls.create(**item)
+                    my_list.append(instance)
+        except FileNotFoundError:
+            return my_lis
+        return my_list
