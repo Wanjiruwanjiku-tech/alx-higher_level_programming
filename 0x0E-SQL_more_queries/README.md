@@ -1,4 +1,3 @@
-
 STRUCTURED QUERRY LANGUAGE
 --------------------------
 
