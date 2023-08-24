@@ -26,7 +26,7 @@ def main():
 
     #create a cursor
 
-    cur = db.cursor()
+    cur = connection.cursor()
 
     querry = "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY state.id".format(searchName)
 
@@ -37,6 +37,9 @@ def main():
     rows = cur.fetchall()
     for row in rows:
         print(row)
+
+    cur.close()
+    connection.close()
 
 if __name__ == "__main__":
     main()

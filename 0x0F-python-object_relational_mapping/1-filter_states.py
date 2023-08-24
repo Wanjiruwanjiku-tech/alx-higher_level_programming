@@ -18,7 +18,7 @@ if __name__ == '__main__':
     Create a cursor to interact with the 
     database
     """
-    cur = db.cursor()
+    cur = connection.cursor()
 
     # Execute the query
     query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
@@ -33,3 +33,6 @@ if __name__ == '__main__':
     rows = cur.fetchall()
     for row in rows:
         print(row)
+
+    cur.close()
+    connection.close()
