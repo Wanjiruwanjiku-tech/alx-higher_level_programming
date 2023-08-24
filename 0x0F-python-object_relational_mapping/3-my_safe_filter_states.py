@@ -1,4 +1,4 @@
-#!/uasr/bin/python3
+#!/usr/bin/python3
 
 """
 The script takes in arguments and displays all
