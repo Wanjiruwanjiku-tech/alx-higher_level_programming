@@ -9,8 +9,8 @@ class SquareWithCharPrint extends Square {
   charPrint (c) {
     // Check if c is undefined
     const myChar = c || 'X';
-    for (let i = 0; i < this.size; i++) {
-      console.log(myChar.repeat(this.size));
+    for (let i = 0; i < this.height; i++) {
+      console.log(myChar.repeat(this.width));
     }
   }
 }
