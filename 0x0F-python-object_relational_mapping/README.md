@@ -9,13 +9,21 @@ This project will Implement SQLAlchemy to interact with databases.
 Dealing with SQLAlchemy.
 -------------------------------------
 1. Installation
+
+
     pip install sqlalchemy
 
+
 2. Connecting to a database
+
+
     from sqlalchemy import create-engine
     engine = create_engine(<appropriate url to the database>)
 
+
 3. Defining table structures.
+
+
     from sqlalchemy import Column, Integer, String, Sequence, create_engine
     from sqlalchemy.ext.declarative import declarative_base
     Base = declarative_base()
@@ -25,10 +33,16 @@ Dealing with SQLAlchemy.
         name = Column(String(50))
         age = (Integer)
 
+
 4. Creating the Table
+
+
     Base.metadata.create_all(engine)
 
+
 5. Inserting Data.
+
+
     from sqlalchemy.orm import sessionmaker
     Session = sessionmaker(bind=engine)
     session = Session()
@@ -36,7 +50,10 @@ Dealing with SQLAlchemy.
     session.add(newUser)
     session.commit()
 
+
 6. Querying Data.
+
+
     users = session.query(User).all()
         for user in users:
             print(user.name, user.age)
