@@ -7,7 +7,7 @@ import sys
 #Define a function 
 def list_states(username, password, database):
     # Create a MySQLdb connection
-    db = MySQLd.connect(
+    db = MySQLdb.connect(
         host="localhost",
         user="username",
         passwd="password",
@@ -15,7 +15,7 @@ def list_states(username, password, database):
         port=3306
     )
     # Create a cursor object to help execute queries
-    cursor = db.connect()
+    cursor = db.cursor)
     # Execute query to retrive states
     query = "SELECT * FROM states ORDER BY states.id"
     cursor.execute(query)
@@ -25,9 +25,9 @@ def list_states(username, password, database):
         print(state)
     # Close cursor and connection
     cursor.close()
-    db.close
+    db.close()
 
-if __name__ == "__maim__":
+if __name__ == "__main__":
     # Get args from command line
     username, password, database = sys.argv[1], sys.argv[2],sys.argv[3]
     # Call the Function to list states
