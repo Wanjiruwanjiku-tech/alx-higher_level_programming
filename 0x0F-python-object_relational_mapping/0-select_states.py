@@ -9,13 +9,13 @@ def list_states(username, password, database):
     # Create a MySQLdb connection
     db = MySQLdb.connect(
         host="localhost",
-        user="username",
-        passwd="password",
-        db="database",
+        user=username,
+        passwd=password,
+        db=database,
         port=3306
     )
     # Create a cursor object to help execute queries
-    cursor = db.cursor)
+    cursor = db.cursor()
     # Execute query to retrive states
     query = "SELECT * FROM states ORDER BY states.id"
     cursor.execute(query)
