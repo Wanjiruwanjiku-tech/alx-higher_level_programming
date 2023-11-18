@@ -22,8 +22,8 @@ def filter_my_state(username, password, database, stateName):
         port=3306
     )
     cursor = db.cursor()
-    query = "SELECT * FROM states WHERE name=%s"
-    cursor.execute(query, (stateName,))
+    query = "SELECT * FROM states WHERE name LIKE '{}' ORDER BY id ASC".format(stateName)
+    cursor.execute(query)
     states = cursor.fetchall()
     for state in states:
         print(state)
