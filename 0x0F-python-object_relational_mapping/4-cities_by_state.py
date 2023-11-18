@@ -3,7 +3,7 @@
 This Module runs a script that lists all cities in a database
 The script takes 3 args and orders cities by cities_id in ASC
 """
-import Mysqldb
+import MySQLdb
 import sys
 
 def list_cities(username, password, database):
@@ -14,10 +14,10 @@ def list_cities(username, password, database):
     database = The database name
     """
     # Create a Connection
-    db = Mysqldb.connect(
+    db = MySQLdb.connect(
         host="localhost",
         user=username,
-        db=database;
+        db=database,
         port=3306
     )
     # Create a cursor object and execute commands
