@@ -24,7 +24,7 @@ def filter_states(username, password, database):
     )
     # Create a cursor object and execute querry
     cursor = db.cursor()
-    query = "SELECT * FROM states WHERE name=N"
+    query = "SELECT * FROM states WHERE name LIKE 'N%'"
     cursor.execute(query)
     # Fetch all rows and Display them
     states = cursor.fetchall()
