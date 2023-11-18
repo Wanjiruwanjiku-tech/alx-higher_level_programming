@@ -5,7 +5,7 @@ This Module runs a script that Displays states according to the provided argumen
 import MySQLdb
 import sys
 
-def filter_my_state(username, password, database, stateName);
+def filter_my_state(username, password, database, stateName):
     """
     The function displays states according to the provided command line arg
     the function take four parameter:
@@ -15,17 +15,16 @@ def filter_my_state(username, password, database, stateName);
     stateName = The statename searched
     """
     db = MySQLdb.connect(
-        host="localhost"
+        host="localhost",
         user=username,
         passwd=password,
         db=database,
-        name=stateName,
         port=3306
     )
     cursor = db.cursor()
-    query = "SELECT * FROM states WHERE name=stateName"
-    cursor.execute(query)
-    cursor.fetchall()
+    query = "SELECT * FROM states WHERE name=%s"
+    cursor.execute(query, (stateName,))
+    states = cursor.fetchall()
     for state in states:
         print(state)
     cursor.close()
