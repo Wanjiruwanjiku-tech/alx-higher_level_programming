@@ -24,7 +24,9 @@ def list_cities(username, password, database):
     # Create a cursor object and execute commands
     cursor = db.cursor()
 
-    query = "SELECT * FROM cities  ORDER BY cities.id ASC"
+    query = "SELECT cities.id, cities.name, states.name FROM cities \
+        JOIN states ON cities.states_id = states.id \
+            ORDER BY cities.id ASC"
     cursor.execute(query)
     # Fetch all cities in the rows
     cities = cursor.fetchall()
