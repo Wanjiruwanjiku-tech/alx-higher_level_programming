@@ -25,7 +25,7 @@ if __name__ =="__main__":
     # Querry state objects and display the first result
     firstState= session.query(State).order_by(State.id).first()
     if firstState:
-        print("{}: {}".format(state.id, state.name))
+        print("{}: {}".format(firstState.id, firstState.name))
     else:
         print("\n")
     
