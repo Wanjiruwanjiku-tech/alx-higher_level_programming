@@ -29,7 +29,7 @@ def list_cities_by_state(username, password, database, stateName):
         JOIN states ON cities.state_id \
             WHERE states.name = %s \
                 ORDER BY cities.id ASC"
-    cursor.execute(query, ())
+    cursor.execute(query, (stateName,))
     # Fetch 
     cities = cursor.fetchall()
     for city in cities:
