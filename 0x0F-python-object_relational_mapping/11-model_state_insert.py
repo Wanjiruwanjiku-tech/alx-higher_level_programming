@@ -1,4 +1,4 @@
-#!/usr/python3
+#!/usr/bin/python3
 """
 This Module runs a Script that add the state object louisiana into a database
 the script must use sqlalchemy
