@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """
 The Module runs a script that prints the state object with the name passes as arg
 The script must use SQLAlchemy
@@ -17,7 +17,7 @@ def get_state(username, password, database, stateName):
     database = mysql database,
     stateName =  the name to be searched.
     """
-    engine = create_engine('mysql://{}:{}@localhost:3306/{}')
+    engine = create_engine('mysql://{}:{}@localhost:3306/{}'.format(username, password, database))
     Session = sessionmaker(bind=engine)
     session = Session()
     states = session.query(State).filter(State.name == stateName).first()
