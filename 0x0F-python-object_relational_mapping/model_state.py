@@ -12,15 +12,15 @@ Base = declarative_base()
 class State(Base):
     """The class links to the MySQL table states"""
     # Define the table Structure
-    __tablename___ = 'states'
+    __tablename__ = 'states'
     id = Column(Integer, primary_key=True, nullable=False,autoincrement=True)
     name = Column(String(128), nullable=False)
 
-    # Connect to a server running on localhost on port 3306
-    engine = create_engine('mysql://username:password@localhost:3306/database')
+# Connect to a server running on localhost on port 3306
+engine = create_engine('mysql://username:password@localhost:3306/database')
 
-    # Create the table
-    Base.metadata.create_all(engine)
-    # Create the session
-    Session = sessionmaker(bind=engine)
-    session = Session()
+# Create the table
+Base.metadata.create_all(engine)
+# Create the session
+Session = sessionmaker(bind=engine)
+session = Session()
