@@ -7,10 +7,12 @@ This module inherits from base which is imported from model_state
 The module must use sqlalchemy
 """
 from model_state import Base
-from sqlalchemy import Integer, String, Column
+from sqlalchemy import Integer, String, Column, Foreignkey
+from sqlalchemy.orm import relationship
 
 class City(Base):
     __tablename__ = 'cities'
     id = Column(Integer, unique=True, autoincrement=True, primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
     state_id = Column(Integer, nullable=False, Foreignkey=states.id)
+    state = relationship("State", back_populates="cities")
