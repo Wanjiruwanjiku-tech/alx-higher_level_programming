@@ -5,6 +5,7 @@ The module must use SQLAlchemy.
 State and Base classes must be imported from model_state
 Results must be sorted in ascending order by cities.id
 Results are to be displayed in the format 'state name: city id city name'
+The module takes 3 args
 """
 import sys
 from model_state import Base, State
