@@ -26,7 +26,7 @@ def filter_states(username, password, database):
     # Query State and find all with 'a'
     states =  session.query(State).order_by(State.id).filter(State.name.ilike('%a%')).all()
     for state in states:
-        print("{}: {}".format(states.id, states.name))
+        print("{}: {}".format(state.id, states.name))
     
     # Close Connection
     session.close()
