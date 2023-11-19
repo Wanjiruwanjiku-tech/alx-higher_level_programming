@@ -10,7 +10,7 @@ If the table states is empty, print nothing followed by a new line
 import sys
 from model_state import Base, State
 from sqlalchemy import create_engine
-fromsqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker
 
 if __name__ =="__main__":
     username, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
