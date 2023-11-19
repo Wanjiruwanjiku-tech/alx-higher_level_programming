@@ -25,10 +25,7 @@ def list_cities_by_state(username, password, database, stateName):
         port=3306
     )
     cursor = db.cursor()
-    query = "SELECT cities.id, cities.name, states.name FROM cities \
-        JOIN states ON cities.state_id \
-            WHERE states.name = %s \
-                ORDER BY cities.id ASC"
+    query = "SELECT cities.name FROM cities JOIN states ON cities,state_id = states.id WHERE state.name = %s ORDER BY cities.id ASC"
     cursor.execute(query, (stateName,))
     # Fetch 
     cities = cursor.fetchall()
