@@ -9,7 +9,7 @@ from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 import sys
-if __name__ = "__main__":
+if __name__ == "__main__":
     username, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
 
     # Create a connection to the MySQL server
