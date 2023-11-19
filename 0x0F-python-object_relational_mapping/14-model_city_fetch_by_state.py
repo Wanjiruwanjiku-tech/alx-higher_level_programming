@@ -19,11 +19,13 @@ if __name__ == "__main__":
     #create a connection
     engine = create_engine('mysql://{}:{}@localhost:3306/{}'.format(username, password, database))
     Base.metadata.create_all(engine)
+    
     #create a session to interact with the database
     Session = sessionmaker(bind=engine)
     session = Session()
+
     #get the list of all cities
-    cities = session.querry(City).join(State).order_by(City.id).all()
+    cities = session.query(City).join(State).order_by(City.id).all()
     for city in cities:
         print("{}: ({}) {}".format(city.state.name, city.id, city.name))
 
