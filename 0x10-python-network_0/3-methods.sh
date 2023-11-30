@@ -1,3 +1,3 @@
 #!/bin/bash
 #The script displays all http methods the server will accept
-curl -si --request OPTIONS "$1"
+curl -sI "$1" | grep -i "Alow" | cut -d " " -f 2-
