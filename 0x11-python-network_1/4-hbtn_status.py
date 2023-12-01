@@ -8,8 +8,8 @@ import requests
 if __name__ == "__main__":
     
     response = requests.get('https://alx-intranet.hbtn.io/status')
-    decoded = response.content.decode('utf-8')
+    decoded_content = response.text
 
     print("Body response:")
-    print("\t- type {}".format(type(decoded)))
-    print("\t- content: {}".format(decoded))
+    print("\t- type {}".format(type(decoded_content)))
+    print("\t- content: {}".format(decoded_content))
