@@ -68,3 +68,4 @@ Nice, right? What about the other HTTP request types: PUT, DELETE, HEAD and OPTI
 That’s all well and good, but it’s also only the start of what Requests can do.
 
 - This project seeks to dive deeper
+![meme](https://github.com/Wanjiruwanjiku-tech/alx-higher_level_programming/blob/master/0x11-python-network_1/Images/dive.jpg?raw=true)
