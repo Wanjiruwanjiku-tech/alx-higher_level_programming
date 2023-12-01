@@ -16,7 +16,7 @@ from sys import argv
 
 if __name__ == "__main__":
     # Check if args have been given
-    if len(argv) != 2:
+    if len(argv) <= 1:
         letter = ""
     else:
         letter = argv[1]
