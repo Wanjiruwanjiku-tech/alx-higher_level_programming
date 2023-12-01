@@ -13,7 +13,7 @@ if __name__ == "__main__":
         decoded_content = content.decode('utf-8', 'replace')
 
         # Display the response body as stated
-        print("Body response")
+        print("Body response:")
         print("\t- type:", type(content))
         print("\t- content:", content)
         print("\t- utf8 content:", decoded_content)
