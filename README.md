@@ -1,15 +1,9 @@
-PYTHON
+HIGHER LEVEL PROGRAMMING LANGUAGES
+----------------------------------------------
 
-Learning to code using python Language
+![programmingLangs](https://github.com/Wanjiruwanjiku-tech/alx-higher_level_programming/blob/master/Project_images/python.png?raw=true)
 
-Python is an Interpreted, General purpose (versatile)
-High-level programming language with easy syntax and dynamic semantics.
+- A high-level language (HLL) is a programming language such as C, FORTRAN, or Pascal that enables a programmer to write programs that are more or less independent of a particular type of computer. Such languages are considered high-level because they are closer to human languages and further from machine languages.
 
-The language was created by Guido Van Rossun in the 1980's.
-
-WHY PYTHON
-
-1. Open Source
-2. Huge Community Support
-3. Cross Platform
-4. Huge set of Libraries and Tools 
+C
+-----------------------------
