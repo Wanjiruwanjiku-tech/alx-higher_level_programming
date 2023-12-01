@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/python3
 """
 Uses the requests and sys packages to send a request and display the values
 of a variable X-Request-Id
