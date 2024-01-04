@@ -6,10 +6,10 @@ const request = require('request');
 
 const url = process.argv[2];
 request(url, function (err, respnse, body) {
-    if (err) {
-        console.log(err);
-    } else if (response.statusCode === 200) {
-        const completed = {};
+  if (err) {
+    console.log(err);
+  } else if (response.statusCode === 200) {
+    const completed = {};
     const tasks = JSON.parse(body);
     for (const i in tasks) {
       const task = tasks[i];
