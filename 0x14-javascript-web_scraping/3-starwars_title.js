@@ -5,7 +5,7 @@
 
 const request = require('request');
 
-const episode = 18;
+const episode = process.argv[2];
 
 if (parseInt(episode) < 8) {
   const url = 'https://swapi-api.hbtn.io/api/films/' + episode;
