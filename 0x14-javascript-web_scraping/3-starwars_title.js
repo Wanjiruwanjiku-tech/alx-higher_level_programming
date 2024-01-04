@@ -8,7 +8,7 @@ const request = require('request');
 const episode = process.argv[2];
 
 if (parseInt(episode) < 8) {
-  const url = 'https://swapi-api.alx-tools.com/api/films/:id';
+  const url = 'https://swapi-api.alx-tools.com/api/films/:id' + episode;
 
   request(url, (err, res, body) => {
     if (err) {
