@@ -5,10 +5,10 @@
 
 const request = require('request');
 
-const episode = process.argv[2];
+const episodeId = 18;
 
-if (parseInt(episode) < 8) {
-  const url = 'https://swapi-api.alx-tools.com/api/films/:id' + episode;
+if (parseInt(episodeId) < 8) {
+  const url = 'https://swapi-api.hbtn.io/api/films/' + episodeId;
 
   request(url, (err, res, body) => {
     if (err) {
