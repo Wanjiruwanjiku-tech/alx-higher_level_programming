@@ -5,10 +5,10 @@
 
 const request = require('request');
 
-const episodeId = 18;
+const episode = 18;
 
-if (parseInt(episodeId) < 8) {
-  const url = 'https://swapi-api.hbtn.io/api/films/' + episodeId;
+if (parseInt(episode) < 8) {
+  const url = 'https://swapi-api.hbtn.io/api/films/' + episode;
 
   request(url, (err, res, body) => {
     if (err) {
